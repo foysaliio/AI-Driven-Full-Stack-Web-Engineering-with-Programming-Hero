@@ -1,0 +1,36 @@
+/* Background */
+
+.bg-color {
+  background-color: lightblue;
+  height: 100px;
+}
+
+.bg-image {
+  background-image: url("https://picsum.photos/400/200");
+  height: 200px;
+}
+
+.bg-no-repeat {
+  background-image: url("https://picsum.photos/100/100");
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+.bg-position {
+  background-image: url("https://picsum.photos/100/100");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
+}
+
+.bg-size {
+  background-image: url("https://picsum.photos/100/100");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+.bg-gradient {
+  background: linear-gradient(to right, tomato, gold);
+  height: 100px;
+}

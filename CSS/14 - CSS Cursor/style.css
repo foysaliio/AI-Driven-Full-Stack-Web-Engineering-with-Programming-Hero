@@ -1,0 +1,43 @@
+/* Cursor */
+
+.box {
+  width: 200px;
+  height: 80px;
+  background-color: lightsteelblue;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-move {
+  cursor: move;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.cursor-text {
+  cursor: text;
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-crosshair {
+  cursor: crosshair;
+}
+
+.cursor-zoom-in {
+  cursor: zoom-in;
+}

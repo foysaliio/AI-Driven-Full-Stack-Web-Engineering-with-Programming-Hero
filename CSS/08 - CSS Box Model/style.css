@@ -1,0 +1,14 @@
+/* Box Model */
+
+.box-model {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(166, 127, 238);
+  padding: 20px;
+  border: 10px solid rgb(198, 198, 202);
+  margin: 30px;
+}
+
+.box-border {
+  outline: 1px dashed red;
+}

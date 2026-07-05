@@ -1,0 +1,41 @@
+/* Margin & Padding */
+
+.box {
+  background-color: lightyellow;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.margin-all {
+  margin: 20px;
+}
+
+.margin-sides {
+  margin: 10px 50px;
+}
+
+.margin-each {
+  margin-top: 20px;
+  margin-right: 100px;
+  margin-bottom: 15px;
+  margin-left: 70px;
+}
+
+.margin-auto {
+  margin: 0 auto;
+  width: 150px;
+}
+
+.padding-all {
+  padding: 20px;
+}
+
+.padding-sides {
+  padding: 10px 30px;
+}
+
+.padding-each {
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+}

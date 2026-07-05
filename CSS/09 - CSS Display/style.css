@@ -1,0 +1,45 @@
+/* Display */
+
+.display-block {
+  display: block;
+  background-color: lightgreen;
+  width: 900px;
+  height: 50px;
+}
+
+.display-inline {
+  display: inline;
+  background-color: lightpink;
+  height: 100ox; /* This value doesn't work cause it's inline */
+  width: 500ox; /* This value doesn't work cause it's inline */
+}
+
+.display-inline-block {
+  display: inline-block;
+  background-color: lightskyblue;
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+}
+
+.show-display-block {
+  display: block;
+}
+
+.hide-display-none {
+  display: none;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+  height: 100px;
+  width: 800px;
+  border: 1px solid blueviolet;
+}
+
+.visibility-visible {
+  visibility: visible;
+  height: 100px;
+  width: 800px;
+  border: 1px solid blueviolet;
+}

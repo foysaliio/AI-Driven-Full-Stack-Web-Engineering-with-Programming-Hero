@@ -1,0 +1,28 @@
+/* Opacity & Visibility */
+
+.box {
+  width: 150px;
+  height: 80px;
+  background-color: tomato;
+  margin-bottom: 15px;
+}
+
+.opacity-full {
+  opacity: 1;
+}
+
+.opacity-half {
+  opacity: 0.5;
+}
+
+.opacity-low {
+  opacity: 0.2;
+}
+
+.visibility-visible {
+  visibility: visible;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Basic grid (fixed columns & rows)</h2>
+    <div class="grid-basic">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+    </div>
+
+    <h2>fr unit (1fr 2fr 1fr)</h2>
+    <div class="grid-fr">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+    </div>
+
+    <h2>repeat()</h2>
+    <div class="grid-repeat">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+    </div>
+
+    <h2>auto-fit + minmax</h2>
+    <div class="grid-auto-fit">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+    </div>
+
+    <h2>grid-column / grid-row span</h2>
+    <div class="grid-span">
+      <div class="grid-item span-col-2">span col 2</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item span-row-2">span row 2</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+    </div>
+
+    <h2>Named grid areas</h2>
+    <div class="grid-areas">
+      <div class="grid-item area-header">Header</div>
+      <div class="grid-item area-sidebar">Sidebar</div>
+      <div class="grid-item area-content">Content</div>
+      <div class="grid-item area-footer">Footer</div>
+    </div>
+
+    <h2>justify-items / align-items</h2>
+    <div class="grid-justify-align">
+      <div class="grid-item" style="width: 50px">1</div>
+      <div class="grid-item" style="width: 50px">2</div>
+      <div class="grid-item" style="width: 50px">3</div>
+    </div>
+
+    <h2>justify-content: center (grid as whole)</h2>
+    <div class="grid-content-center">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+    </div>
+
+    <h2>place-items shorthand</h2>
+    <div class="grid-place-items">
+      <div class="grid-item" style="width: 50px">1</div>
+      <div class="grid-item" style="width: 50px">2</div>
+      <div class="grid-item" style="width: 50px">3</div>
+    </div>
+
+    <h2>grid-auto-flow: dense</h2>
+    <div class="grid-dense">
+      <div class="grid-item">1</div>
+      <div class="grid-item span-col-2">wide</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+    </div>
+  </body>
+</html>

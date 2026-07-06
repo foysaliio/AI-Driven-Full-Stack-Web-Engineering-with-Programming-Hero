@@ -1,0 +1,143 @@
+/* CSS Grid - Complete */
+
+.grid-item {
+  background-color: coral;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Basic grid with columns and rows */
+.grid-basic {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 80px 80px;
+  gap: 10px;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* fr unit */
+.grid-fr {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* repeat() */
+.grid-repeat {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* auto-fit / minmax */
+.grid-auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* grid-column / grid-row span */
+.grid-span {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 80px);
+  gap: 10px;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.span-col-2 {
+  grid-column: span 2;
+}
+
+.span-row-2 {
+  grid-row: span 2;
+}
+
+/* named grid areas */
+.grid-areas {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  gap: 10px;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.area-header {
+  grid-area: header;
+}
+
+.area-sidebar {
+  grid-area: sidebar;
+}
+
+.area-content {
+  grid-area: content;
+}
+
+.area-footer {
+  grid-area: footer;
+}
+
+/* justify-items / align-items */
+.grid-justify-align {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 150px;
+  justify-items: center;
+  align-items: center;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* justify-content / align-content (grid as whole) */
+.grid-content-center {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  justify-content: center;
+  height: 150px;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* place-items shorthand */
+.grid-place-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 150px;
+  place-items: center;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* grid-auto-flow: dense */
+.grid-dense {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: dense;
+  gap: 10px;
+  background-color: #eee;
+  padding: 10px;
+}

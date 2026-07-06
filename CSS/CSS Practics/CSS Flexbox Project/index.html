@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Flexbox Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 1. Navbar -->
+    <nav class="navbar">
+      <div class="logo">Foy<span class="logo_last_part">sal</span></div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- 2. Pricing Cards -->
+    <section>
+      <h2>Pricing Plans</h2>
+      <div class="pricing-container">
+        <div class="pricing-card">
+          <h3>Basic</h3>
+          <div class="price">$9/mo</div>
+          <ul>
+            <li>1 Project</li>
+            <li>5GB Storage</li>
+            <li>Email Support</li>
+          </ul>
+          <button>Choose Plan</button>
+        </div>
+
+        <div class="pricing-card featured">
+          <h3>Pro</h3>
+          <div class="price">$29/mo</div>
+          <ul>
+            <li>10 Projects</li>
+            <li>50GB Storage</li>
+            <li>Priority Support</li>
+          </ul>
+          <button>Choose Plan</button>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <div class="price">$99/mo</div>
+          <ul>
+            <li>Unlimited Projects</li>
+            <li>500GB Storage</li>
+            <li>24/7 Support</li>
+          </ul>
+          <button>Choose Plan</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Team Section -->
+    <section>
+      <h2>Our Team</h2>
+      <div class="team-container">
+        <div class="team-member">
+          <img src="https://picsum.photos/id/64/100/100" alt="Member 1" />
+          <h4>Alex Rahman</h4>
+          <p>Frontend Developer</p>
+        </div>
+        <div class="team-member">
+          <img src="https://picsum.photos/id/65/100/100" alt="Member 2" />
+          <h4>Nadia Islam</h4>
+          <p>UI/UX Designer</p>
+        </div>
+        <div class="team-member">
+          <img src="https://picsum.photos/id/91/100/100" alt="Member 3" />
+          <h4>Karim Hasan</h4>
+          <p>Backend Developer</p>
+        </div>
+        <div class="team-member">
+          <img src="https://picsum.photos/id/26/100/100" alt="Member 4" />
+          <h4>Farhana Akter</h4>
+          <p>Project Manager</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Gallery -->
+    <section>
+      <h2>Gallery</h2>
+      <div class="gallery-container">
+        <img src="https://picsum.photos/id/10/200/150" alt="Gallery 1" />
+        <img src="https://picsum.photos/id/20/200/150" alt="Gallery 2" />
+        <img src="https://picsum.photos/id/30/200/150" alt="Gallery 3" />
+        <img src="https://picsum.photos/id/40/200/150" alt="Gallery 4" />
+        <img src="https://picsum.photos/id/50/200/150" alt="Gallery 5" />
+      </div>
+    </section>
+
+    <!-- 5. Centering -->
+    <section>
+      <h2>Perfect Centering</h2>
+      <div class="center-box">
+        <p>I am perfectly centered using Flexbox</p>
+      </div>
+    </section>
+
+    <!-- 6. Equal Height Cards -->
+    <section>
+      <h2>Equal Height Cards</h2>
+      <div class="equal-cards-container">
+        <div class="equal-card">
+          <h4>Card One</h4>
+          <p>Short content.</p>
+        </div>
+        <div class="equal-card">
+          <h4>Card Two</h4>
+          <p>
+            This card has a lot more content than the others, but flexbox keeps
+            all cards the same height automatically.
+          </p>
+        </div>
+        <div class="equal-card">
+          <h4>Card Three</h4>
+          <p>Medium length content here.</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

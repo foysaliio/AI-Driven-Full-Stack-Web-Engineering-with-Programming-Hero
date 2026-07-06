@@ -1,0 +1,232 @@
+/* ============================
+   Reset & Base
+============================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #222;
+  background-color: #f7f8fa;
+}
+
+section {
+  padding: 50px 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* ============================
+   1. Navbar
+============================ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2937;
+  padding: 15px 30px;
+}
+
+.navbar .logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo_last_part {
+  color: yellow;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease-in;
+}
+
+.navbar .nav-links li a:hover {
+  color: #89c4dd;
+}
+
+/* ============================
+   2. Pricing Cards
+============================ */
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  width: 260px;
+  text-align: center;
+}
+
+.pricing-card.featured {
+  border: 2px solid #38bdf8;
+  transform: scale(1.05);
+}
+
+.pricing-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.pricing-card .price {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #1f2937;
+}
+
+.pricing-card ul {
+  list-style: none;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.pricing-card ul li {
+  padding: 6px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.pricing-card button {
+  background-color: #38bdf8;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.pricing-card button:hover {
+  background-color: #0ea5e9;
+}
+
+/* ============================
+   3. Team Section
+============================ */
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 180px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.team-member img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  object-fit: cover;
+}
+
+.team-member h4 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.team-member p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* ============================
+   4. Gallery
+============================ */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery-container img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-grow: 1;
+}
+
+/* ============================
+   5. Centering (perfect center)
+============================ */
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: #1f2937;
+  border-radius: 10px;
+}
+
+.center-box p {
+  color: white;
+  font-size: 18px;
+}
+
+/* ============================
+   6. Equal Height Cards
+============================ */
+.equal-cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.equal-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  flex: 1 1 250px;
+}
+
+.equal-card h4 {
+  margin-bottom: 10px;
+}
+
+.equal-card p {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #555;
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>CSS Variables (Custom Properties)</h1>
+
+    <!-- Global variables used directly -->
+    <div class="box">
+      <p>Global Variables</p>
+    </div>
+
+    <!-- Local/scoped variable overrides the global one -->
+    <div class="card">
+      <p>Locally Scoped Variable</p>
+    </div>
+
+    <!-- Fallback value when variable isn't defined -->
+    <button class="btn">Fallback Value Button</button>
+
+    <!-- Variable used inside calc() -->
+    <div class="spaced-box">Variable inside calc()</div>
+
+    <!-- Theme switching via variable override -->
+    <div class="theme theme-dark">
+      <p>Dark Theme</p>
+    </div>
+    <div class="theme theme-light">
+      <p>Light Theme</p>
+    </div>
+  </body>
+</html>

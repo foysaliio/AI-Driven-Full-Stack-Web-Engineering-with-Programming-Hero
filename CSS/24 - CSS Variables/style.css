@@ -1,0 +1,78 @@
+/* ==========================================================
+   CSS Variables (Custom Properties)
+   ========================================================== */
+
+/* 1. Global variables — defined on :root, available everywhere */
+:root {
+  --main-color: #38bdf8;
+  /* --btn-color: red; */
+  --text-color: #ffffff;
+  --spacing: 16px;
+  --radius: 8px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: var(--spacing);
+}
+
+.box {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing);
+}
+
+/* 2. Local/scoped variable — redefining a variable inside a
+      selector overrides it only for that element and its children */
+.card {
+  --main-color: #fbbf24; /* overrides the global value locally */
+  background-color: var(--main-color);
+  color: #0f172a;
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing);
+}
+
+/* 3. Fallback value — used only if --btn-color is not defined anywhere */
+.btn {
+  background-color: var(--btn-color, gray);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing);
+  cursor: pointer;
+}
+
+/* 4. Variables inside calc() for dynamic sizing */
+.spaced-box {
+  padding: calc(var(--spacing) * 2);
+  background-color: #1e293b;
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing);
+}
+
+/* 5. Theme switching by overriding variables per class */
+.theme {
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+}
+
+.theme-dark {
+  --bg: #020617;
+  --fg: #e2e8f0;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+.theme-light {
+  --bg: #f1f5f9;
+  --fg: #0f172a;
+  background-color: var(--bg);
+  color: var(--fg);
+}

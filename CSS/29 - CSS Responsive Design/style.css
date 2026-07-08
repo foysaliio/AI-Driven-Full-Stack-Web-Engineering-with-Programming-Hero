@@ -1,0 +1,229 @@
+/* ============================
+   Responsive Design - Media Queries
+   Mobile-first approach:
+   base styles = mobile, then add rules for bigger screens
+============================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* ============================
+   1. Current breakpoint indicator
+   (text changes visually via display none/block per screen size)
+============================ */
+.breakpoint-label {
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.label-mobile {
+  background-color: #ef4444;
+  display: block;
+}
+.label-tablet {
+  background-color: #f59e0b;
+  display: none;
+}
+.label-desktop {
+  background-color: #10b981;
+  display: none;
+}
+.label-large {
+  background-color: #3b82f6;
+  display: none;
+}
+
+/* ============================
+   2. Responsive grid/box layout
+   1 column on mobile -> 2 on tablet -> 4 on desktop
+============================ */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.grid-box {
+  background-color: coral;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* ============================
+   3. Responsive navbar
+   stacked on mobile -> horizontal on tablet
+============================ */
+.nav-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #1f2937;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.nav-responsive a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ============================
+   4. Responsive typography
+============================ */
+.responsive-heading {
+  font-size: 20px;
+}
+
+/* ============================
+   5. Hide / show elements per screen size
+============================ */
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+/* =====================
+ 7. Range Box 
+ ====================== */
+
+.range-box {
+  padding: 15px;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #9ca3af;
+}
+
+/* ============================================
+   MEDIA QUERIES (mobile-first)
+   Common breakpoints:
+   - Small (phones):     0px    - 599px
+   - Medium (tablets):   600px  - 899px
+   - Large (laptops):    900px  - 1199px
+   - Extra large:        1200px+
+============================================ */
+
+/* Tablet and up */
+@media (min-width: 600px) {
+  .label-mobile {
+    display: none;
+  }
+  .label-tablet {
+    display: block;
+  }
+
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-responsive {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .responsive-heading {
+    font-size: 26px;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 900px) {
+  .label-tablet {
+    display: none;
+  }
+  .label-desktop {
+    display: block;
+  }
+
+  .responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+
+  .responsive-heading {
+    font-size: 32px;
+  }
+}
+
+/* Large screens and up */
+@media (min-width: 1200px) {
+  .label-desktop {
+    display: none;
+  }
+  .label-large {
+    display: block;
+  }
+
+  .responsive-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Orientation-based media query */
+@media (orientation: landscape) {
+  .orientation-box {
+    background-color: #a855f7;
+  }
+  .orientation-box::after {
+    content: "Landscape";
+  }
+}
+
+@media (orientation: portrait) {
+  .orientation-box {
+    background-color: #ec4899;
+  }
+  .orientation-box::after {
+    content: "Portrait";
+  }
+}
+
+.orientation-box {
+  padding: 15px;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* Combining multiple conditions (range) */
+@media (min-width: 600px) and (max-width: 899px) {
+  .range-box {
+    background-color: #f59e0b;
+  }
+  .range-box::after {
+    content: " (only visible 600px - 899px)";
+  }
+}

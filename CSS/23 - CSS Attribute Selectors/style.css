@@ -1,0 +1,284 @@
+/* ==========================================================
+   23 - CSS Attribute Selectors
+   ========================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  margin: 0;
+  padding: 0 20px 60px;
+  line-height: 1.6;
+}
+
+.page-header {
+  text-align: center;
+  padding: 40px 0 20px;
+}
+
+.page-header h1 {
+  color: #38bdf8;
+  margin-bottom: 6px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.demo {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.demo h2 {
+  color: #fbbf24;
+  margin-top: 0;
+}
+
+.demo code {
+  background: #0f172a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #a5f3fc;
+}
+
+/* ---------------------------------------------------------
+   1. [attr] — presence selector
+--------------------------------------------------------- */
+button[disabled],
+input[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #334155;
+}
+
+button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input {
+  padding: 8px 10px;
+  margin: 6px 6px 0 0;
+  border-radius: 6px;
+  border: 1px solid #475569;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+/* ---------------------------------------------------------
+   2. [attr="value"] — exact match
+--------------------------------------------------------- */
+input[type="text"] {
+  border-left: 4px solid #38bdf8;
+}
+
+input[type="email"] {
+  border-left: 4px solid #34d399;
+}
+
+input[type="password"] {
+  border-left: 4px solid #f87171;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #38bdf8;
+}
+
+/* ---------------------------------------------------------
+   3. [attr~="value"] — whitespace-separated word match
+--------------------------------------------------------- */
+.card {
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  background-color: #0f172a;
+  border: 1px solid #475569;
+}
+
+[data-tags~="featured"] {
+  border-color: #fbbf24;
+  background-color: #3f351a;
+}
+
+/* ---------------------------------------------------------
+   4. [attr|="value"] — exact or hyphen-prefixed match
+--------------------------------------------------------- */
+[lang|="en"] {
+  color: #34d399;
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------------
+   5. [attr^="value"] — starts with
+--------------------------------------------------------- */
+.link-list {
+  list-style: none;
+  padding: 0;
+}
+
+.link-list li {
+  margin-bottom: 6px;
+}
+
+a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+a[href^="https://"] {
+  color: #34d399;
+}
+
+a[href^="https://"]::before {
+  content: "🔒 ";
+}
+
+a[href^="mailto:"]::before {
+  content: "✉️ ";
+}
+
+a[href^="tel:"]::before {
+  content: "📞 ";
+}
+
+/* ---------------------------------------------------------
+   6. [attr$="value"] — ends with
+--------------------------------------------------------- */
+a[href$=".pdf"]::after {
+  content: " (PDF)";
+  color: #f87171;
+  font-weight: bold;
+}
+
+a[href$=".zip"]::after {
+  content: " (ZIP)";
+  color: #fbbf24;
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------------
+   7. [attr*="value"] — contains substring anywhere
+--------------------------------------------------------- */
+a[href*="example.com"] {
+  text-decoration: underline;
+  text-decoration-color: #38bdf8;
+}
+
+/* ---------------------------------------------------------
+   8. Case-insensitive matching with " i" flag
+--------------------------------------------------------- */
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 20px;
+  background-color: #334155;
+}
+
+[data-status="active" i] {
+  background-color: #16a34a;
+  color: #ffffff;
+}
+
+/* ---------------------------------------------------------
+   9. Combining multiple attribute selectors
+--------------------------------------------------------- */
+input[type="text"][required],
+input[type="email"][required] {
+  border-left: 4px solid #f87171;
+  background-color: #2a1414;
+}
+
+input[type="text"][required]::placeholder,
+input[type="email"][required]::placeholder {
+  color: #fca5a5;
+}
+
+/* ---------------------------------------------------------
+   10. Real-world form validation states
+--------------------------------------------------------- */
+.validation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.validation-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #94a3b8;
+  gap: 4px;
+}
+
+input[required] {
+  border-left: 4px solid #fbbf24;
+}
+
+input:valid[value]:not([value=""]) {
+  border-left: 4px solid #34d399;
+}
+
+input:invalid[value]:not([value=""]) {
+  border-left: 4px solid #f87171;
+}
+
+input[checked],
+input:checked {
+  outline: 2px solid #38bdf8;
+}
+
+select[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------------------------------------------------------
+   11. data-* theming
+--------------------------------------------------------- */
+.theme-box {
+  display: inline-block;
+  padding: 20px;
+  margin-right: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+[data-theme="light"] {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+[data-theme="dark"] {
+  background-color: #020617;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+}
+
+/* ---------------------------------------------------------
+   Footer
+--------------------------------------------------------- */
+.page-footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #64748b;
+  font-size: 14px;
+}

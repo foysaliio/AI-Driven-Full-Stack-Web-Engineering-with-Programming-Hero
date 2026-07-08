@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>23 - CSS Attribute Selectors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>CSS Attribute Selectors</h1>
+    <p>Every major attribute selector pattern, demonstrated in one page.</p>
+  </header>
+
+  <main>
+
+    <!-- 1. [attr] - presence selector -->
+    <section class="demo">
+      <h2>1. [attr] — Attribute Presence</h2>
+      <p><code>[disabled]</code> styles any element that simply has the attribute, regardless of value.</p>
+      <button>Normal Button</button>
+      <button disabled>Disabled Button</button>
+      <input type="text" placeholder="Normal input" />
+      <input type="text" placeholder="Disabled input" disabled />
+    </section>
+
+    <!-- 2. [attr="value"] - exact match -->
+    <section class="demo">
+      <h2>2. [attr="value"] — Exact Value Match</h2>
+      <p><code>input[type="text"]</code> vs <code>input[type="email"]</code> vs <code>input[type="password"]</code></p>
+      <input type="text" placeholder="type=text" />
+      <input type="email" placeholder="type=email" />
+      <input type="password" placeholder="type=password" />
+      <input type="checkbox" />
+      <input type="radio" />
+    </section>
+
+    <!-- 3. [attr~="value"] - whitespace separated word -->
+    <section class="demo">
+      <h2>3. [attr~="value"] — Contains Whitespace-Separated Word</h2>
+      <p><code>[data-tags~="featured"]</code> matches only if "featured" is one whole word in the list.</p>
+      <div class="card" data-tags="new featured sale">Card A: "new featured sale"</div>
+      <div class="card" data-tags="clearance">Card B: "clearance"</div>
+      <div class="card" data-tags="best-featured">Card C: "best-featured" (should NOT match)</div>
+    </section>
+
+    <!-- 4. [attr|="value"] - exact or starts with value followed by hyphen -->
+    <section class="demo">
+      <h2>4. [attr|="value"] — Exact or Hyphen-Prefixed Match</h2>
+      <p><code>[lang|="en"]</code> matches "en" or "en-US", "en-GB", etc.</p>
+      <p lang="en">lang="en" → matched</p>
+      <p lang="en-US">lang="en-US" → matched</p>
+      <p lang="en-GB">lang="en-GB" → matched</p>
+      <p lang="bn">lang="bn" → NOT matched</p>
+      <p lang="english">lang="english" → NOT matched (no hyphen boundary)</p>
+    </section>
+
+    <!-- 5. [attr^="value"] - starts with -->
+    <section class="demo">
+      <h2>5. [attr^="value"] — Starts With</h2>
+      <p><code>a[href^="https://"]</code> targets secure external links.</p>
+      <ul class="link-list">
+        <li><a href="https://example.com">https://example.com</a></li>
+        <li><a href="http://example.com">http://example.com</a></li>
+        <li><a href="mailto:test@example.com">mailto:test@example.com</a></li>
+        <li><a href="tel:+8801700000000">tel:+8801700000000</a></li>
+      </ul>
+    </section>
+
+    <!-- 6. [attr$="value"] - ends with -->
+    <section class="demo">
+      <h2>6. [attr$="value"] — Ends With</h2>
+      <p><code>a[href$=".pdf"]</code> and <code>a[href$=".zip"]</code> add file-type icons.</p>
+      <ul class="link-list">
+        <li><a href="/files/resume.pdf">resume.pdf</a></li>
+        <li><a href="/files/archive.zip">archive.zip</a></li>
+        <li><a href="/files/photo.png">photo.png</a></li>
+        <li><a href="/files/notes.docx">notes.docx</a></li>
+      </ul>
+    </section>
+
+    <!-- 7. [attr*="value"] - contains substring anywhere -->
+    <section class="demo">
+      <h2>7. [attr*="value"] — Contains Substring Anywhere</h2>
+      <p><code>a[href*="example.com"]</code> matches the substring anywhere inside the value.</p>
+      <ul class="link-list">
+        <li><a href="https://sub.example.com/page">sub.example.com/page</a></li>
+        <li><a href="https://another-example.com">another-example.com</a></li>
+        <li><a href="https://unrelated-site.org">unrelated-site.org</a></li>
+      </ul>
+    </section>
+
+    <!-- 8. Case-insensitive flag -->
+    <section class="demo">
+      <h2>8. [attr="value" i] — Case-Insensitive Matching</h2>
+      <p><code>[data-status="active" i]</code> matches regardless of letter case.</p>
+      <div class="status" data-status="ACTIVE">ACTIVE</div>
+      <div class="status" data-status="Active">Active</div>
+      <div class="status" data-status="active">active</div>
+      <div class="status" data-status="inactive">inactive</div>
+    </section>
+
+    <!-- 9. Combining attribute selectors -->
+    <section class="demo">
+      <h2>9. Combining Multiple Attribute Selectors</h2>
+      <p><code>input[type="text"][required]</code> — both conditions must be true.</p>
+      <form>
+        <input type="text" required placeholder="Required text field" />
+        <input type="text" placeholder="Optional text field" />
+        <input type="email" required placeholder="Required email field" />
+      </form>
+    </section>
+
+    <!-- 10. Real-world form validation states -->
+    <section class="demo">
+      <h2>10. Real-World Use: Form Validation States</h2>
+      <form class="validation-form">
+        <label>Required Field
+          <input type="text" required />
+        </label>
+        <label>Valid Email
+          <input type="email" value="user@example.com" readonly />
+        </label>
+        <label>Invalid Email
+          <input type="email" value="not-an-email" readonly />
+        </label>
+        <label>Checked Checkbox
+          <input type="checkbox" checked />
+        </label>
+        <label>Disabled Select
+          <select disabled>
+            <option>Can't touch this</option>
+          </select>
+        </label>
+      </form>
+    </section>
+
+    <!-- 11. data-theme demo -->
+    <section class="demo">
+      <h2>11. Real-World Use: data-* Theming</h2>
+      <div class="theme-box" data-theme="light">data-theme="light"</div>
+      <div class="theme-box" data-theme="dark">data-theme="dark"</div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>Lesson 23 — CSS Attribute Selectors</p>
+  </footer>
+
+</body>
+</html>

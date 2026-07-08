@@ -1,0 +1,45 @@
+/* Object Fit & Object Position */
+
+.img-box {
+  width: 200px;
+  height: 150px;
+  border: 2px solid black;
+  margin-bottom: 15px;
+}
+
+/* object-fit values */
+.fit-fill {
+  object-fit: fill;
+}
+
+.fit-contain {
+  object-fit: contain;
+}
+
+.fit-cover {
+  object-fit: cover;
+}
+
+.fit-none {
+  object-fit: none;
+}
+
+.fit-scale-down {
+  object-fit: scale-down;
+}
+
+/* object-position */
+.position-top {
+  object-fit: cover;
+  object-position: top;
+}
+
+.position-bottom {
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.position-custom {
+  object-fit: cover;
+  object-position: 20% 80%;
+}

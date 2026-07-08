@@ -1,0 +1,64 @@
+/* Filter & Backdrop Filter */
+
+.img-box {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* filter values */
+.filter-blur {
+  filter: blur(4px);
+}
+
+.filter-brightness {
+  filter: brightness(2.5);
+}
+
+.filter-contrast {
+  filter: contrast(200%);
+}
+
+.filter-grayscale {
+  filter: grayscale(100%);
+}
+
+.filter-sepia {
+  filter: sepia(100%);
+}
+
+.filter-saturate {
+  filter: saturate(300%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(180deg);
+}
+
+.filter-multiple {
+  filter: brightness(1.1) contrast(120%) saturate(150%);
+}
+
+/* backdrop-filter */
+.backdrop-wrapper {
+  position: relative;
+  height: 500px;
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 15px;
+}
+
+.backdrop-box {
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  width: 200px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  color: white;
+  border-radius: 10px;
+}

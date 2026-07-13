@@ -20,6 +20,9 @@ function processOrder(order) {
   if (!order.isPaid) return "Order not paid";
   return "Processing order";
 }
+console.log(processOrder());
+console.log(processOrder({}));
+console.log(processOrder({ isPaid: false }));
 console.log(processOrder({ isPaid: true }));
 
 // ----- switch statement -----
@@ -35,7 +38,7 @@ function getDayName(day) {
       return "Unknown day";
   }
 }
-console.log(getDayName(2)); // "Tuesday"
+console.log(getDayName(3)); // "Wednesday"
 
 // switch uses strict comparison and falls through without break
 function checkType(value) {
@@ -85,14 +88,6 @@ for (const key in person) {
 // ----- break and continue -----
 for (let i = 0; i < 10; i++) {
   if (i === 3) continue; // skip this iteration
-  if (i === 6) break;    // exit the loop entirely
+  if (i === 6) break; // exit the loop entirely
   console.log(`loop value: ${i}`);
-}
-
-// ----- labeled statement (rare, used for breaking nested loops) -----
-outerLoop: for (let i = 0; i < 3; i++) {
-  for (let j = 0; j < 3; j++) {
-    if (j === 1) continue outerLoop;
-    console.log(`i=${i}, j=${j}`);
-  }
 }
